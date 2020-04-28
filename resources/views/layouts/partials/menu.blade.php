@@ -7,14 +7,7 @@
                      </span>
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                     <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{Auth::user()->name}}</strong>
-                     </span> <span class="text-muted text-xs block">{{Auth::user()->roles()->get()->pluck('name')}} <b class="caret"></b></a>
-                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                            <li><a href="">Profile</a></li>
-                            <!-- <li><a href="">Contacts</a></li> -->
-                            <!-- <li><a href="">Mailbox</a></li> -->
-                            {{-- <li class="divider"></li> --}}
-                            {{-- <li><a href="{{url('/logout')}}">Logout</a></li> --}}
-                        </ul>
+                     </span> <span class="text-muted text-xs block">{{Auth::user()->roles()->get()->pluck('name')}} </a>
                 </div>
                 <div class="logo-element">
                     BBF+
@@ -28,7 +21,7 @@
                 <a href="layouts.html"><i class="fa fa-cart-arrow-down"></i> <span class="nav-label">Facturations</span></a>
             </li>
             <li>
-                <a href="layouts.html"><i class="fa fa-diamond"></i> <span class="nav-label">Stock</span></a>
+                <a href="{{route('produits.index')}}"><i class="fa fa-diamond"></i> <span class="nav-label">Stock</span></a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Entrées</span><span class="fa arrow"></span></a>
@@ -55,7 +48,7 @@
                 <a href="#"><i class="fa fa-cogs"></i> <span class="nav-label">Configurations</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse">
                     <li><a href="#">Fournisseurs</a></li>
-                    <li><a href="lockscreen.html">Classe Nomenclature</a></li>
+                    <li><a href="{{route('types.index')}}">Classe Nomenclature</a></li>
 
                 </ul>
 
